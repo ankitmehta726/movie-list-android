@@ -8,6 +8,7 @@ import com.am.movielist.repo.model.ApiResponse
 import com.am.movielist.repo.model.MovieResult
 import com.am.movielist.repo.util.AppExecutors
 import com.am.movielist.repo.util.NetworkBoundResource
+import com.am.movielist.vo.Resource
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -23,7 +24,7 @@ constructor(
     val appExecutors: AppExecutors,
     val movieDao: MovieDao
 ){
-    fun getPopularMovies(): NetworkBoundResource<List<Movie>, MovieResult> {
+    fun getPopularMovies(): LiveData<Resource<List<Movie>>> {
         return object : NetworkBoundResource<List<Movie>, MovieResult>(appExecutors){
             override fun saveCallResult(item: MovieResult?) {
                 movieDao.insertMovies(item?.results)
@@ -40,6 +41,6 @@ constructor(
             override fun createCall(): LiveData<ApiResponse<MovieResult>> {
                 return movieService.getPopularMovies()
             }
-        }
+        }.asLiveData()
     }
 }

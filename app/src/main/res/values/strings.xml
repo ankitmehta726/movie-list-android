@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MovieListAndroid</string>
     <string name="error_loading">Loading</string>
+
+    <string name="movie_image_url">http://image.tmdb.org/t/p/</string>
+    <string name="image_size_780">w780</string>
+    <string name="no_result">No result found</string>
+    <string name="error_no_results">No result found.</string>
 </resources>
