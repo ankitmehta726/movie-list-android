@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MovieListAndroid</string>
+    <string name="error_loading">Loading</string>
 </resources>
