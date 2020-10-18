@@ -1,6 +1,5 @@
 package com.am.movielist.di.module
 
-import androidx.lifecycle.ViewModel
 import com.am.movielist.repo.api.MovieService
 import dagger.Module
 import dagger.Provides

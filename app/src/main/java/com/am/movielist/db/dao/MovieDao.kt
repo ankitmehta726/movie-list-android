@@ -21,17 +21,17 @@ abstract class MovieDao {
     abstract fun insert(vararg movie: Movie?)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun insertMovies(movieList: ArrayList<Any>?)
+    abstract fun insertMovies(movieList: List<Any>)
 
     @Query("DELETE FROM Movie")
     abstract fun deleteAll()
 
     @Query("SELECT * FROM Movie where title = :title")
-    abstract fun searchMovieByTitle(title: String?): LiveData<List<Movie?>?>?
+    abstract fun searchMovieByTitle(title: String?): LiveData<List<Movie>>
 
     @Query("SELECT * FROM Movie where id = :id")
-    abstract fun searchMovieById(id: Int): LiveData<Movie?>?
+    abstract fun searchMovieById(id: Int): LiveData<Movie>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    abstract fun createMovieIfNotExists(movie: Movie?): Long
+    abstract fun createMovieIfNotExists(movie: Movie): Long
 }

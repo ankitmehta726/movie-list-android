@@ -27,7 +27,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    internal fun provideOkHttpInterceptors(): HttpLoggingInterceptor? {
+    internal fun provideOkHttpInterceptors(): HttpLoggingInterceptor {
         return HttpLoggingInterceptor().setLevel(if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE)
     }
 
@@ -39,7 +39,7 @@ class NetworkModule {
      */
     @Provides
     @Singleton
-    fun okHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor?): OkHttpClient? {
+    fun okHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor?): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(AuthInterceptor())
             .addInterceptor(httpLoggingInterceptor)
@@ -52,7 +52,7 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRetrofitClient(@NonNull okHttpClient: OkHttpClient?): Retrofit? {
+    fun provideRetrofitClient(@NonNull okHttpClient: OkHttpClient): Retrofit{
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)

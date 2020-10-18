@@ -1,6 +1,7 @@
 package com.am.movielist.repo
 
 import androidx.lifecycle.LiveData
+import com.am.movielist.db.MovieDB
 import com.am.movielist.db.dao.MovieDao
 import com.am.movielist.db.entity.Movie
 import com.am.movielist.repo.api.MovieService
@@ -20,8 +21,9 @@ import javax.inject.Singleton
 class MovieRepository
 @Inject
 constructor(
-    var movieService: MovieService,
     val appExecutors: AppExecutors,
+    var movieService: MovieService,
+    val movieDB: MovieDB,
     val movieDao: MovieDao
 ){
     fun getPopularMovies(): LiveData<Resource<List<Movie>>> {
