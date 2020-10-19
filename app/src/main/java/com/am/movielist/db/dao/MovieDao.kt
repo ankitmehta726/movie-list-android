@@ -21,7 +21,7 @@ abstract class MovieDao {
     abstract fun insert(vararg movie: Movie?)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun insertMovies(movieList: List<Any>)
+    abstract fun insertMovies(movieList: ArrayList<Movie>?)
 
     @Query("DELETE FROM Movie")
     abstract fun deleteAll()
