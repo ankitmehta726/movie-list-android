@@ -8,11 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.am.movielist.AppViewModelFactory
+import com.am.movielist.viewmodel.AppViewModelFactory
 import com.am.movielist.R
 import com.am.movielist.db.entity.Movie
 import com.am.movielist.di.Injectable
-import com.am.movielist.vo.Resource
 import com.am.movielist.vo.Status
 import kotlinx.android.synthetic.main.fragment_movie_list.*
 import javax.inject.Inject

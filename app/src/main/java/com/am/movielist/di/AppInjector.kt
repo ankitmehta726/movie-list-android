@@ -22,7 +22,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import com.am.MovieApp
+import com.am.movielist.MovieApp
 import com.am.movielist.di.component.DaggerAppComponent
 import dagger.android.AndroidInjection
 import dagger.android.HasAndroidInjector

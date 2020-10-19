@@ -1,4 +1,4 @@
-package com.am
+package com.am.movielist
 
 import android.app.Application
 import com.am.movielist.BuildConfig

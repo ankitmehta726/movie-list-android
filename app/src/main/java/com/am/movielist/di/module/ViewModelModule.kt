@@ -2,7 +2,7 @@ package com.am.movielist.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.am.movielist.AppViewModelFactory
+import com.am.movielist.viewmodel.AppViewModelFactory
 import com.am.movielist.di.key.ViewModelKey
 import com.am.movielist.ui.MovieListViewModel
 import dagger.Binds

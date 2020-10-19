@@ -1,4 +1,4 @@
-package com.am.movielist
+package com.am.movielist.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

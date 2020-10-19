@@ -1,7 +1,7 @@
 package com.am.movielist.di.component
 
 import android.app.Application
-import com.am.MovieApp
+import com.am.movielist.MovieApp
 import com.am.movielist.di.module.AppModule
 import com.am.movielist.di.module.MainActivityModule
 import com.am.movielist.di.module.RoomModule
